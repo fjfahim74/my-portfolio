@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ChevronDown, Github, Link, Linkedin } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, Github, Linkedin } from "lucide-react";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { person } from "@/data/portfolio";
 import { publicImageExists } from "@/lib/images";
@@ -60,9 +61,17 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mt-12 flex justify-center">
-        <Link href="/#about" aria-label="Scroll to About section" className="text-slate-400 hover:text-indigo-600">
-          <ChevronDown size={28} aria-hidden="true" className="motion-safe:animate-bounce" />
+      <div className="mt-8 flex justify-center">
+        <Link
+          href="/#about"
+          aria-label="Scroll to About section"
+          className="text-slate-400 hover:text-indigo-600"
+        >
+          <ChevronDown
+            size={28}
+            aria-hidden="true"
+            className="motion-safe:animate-bounce"
+          />
         </Link>
       </div>
     </section>
